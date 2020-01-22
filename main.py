@@ -38,6 +38,10 @@ def compare(answer, opp):
         if opp == 's':
             return 'draw'
 
+def again():
+    ans = input("Do you want to play again? (y/n): ")
+    if ans == 'y':
+        main()
 
 def main():
     answer = ask_user()
