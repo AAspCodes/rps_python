@@ -1,5 +1,5 @@
 def ask_user():
-    prompt = "Rock, Paper, or Sciccors? r/p/s: "
+    prompt = "Rock, Paper, or Scissors? r/p/s: "
     while True:
         answer = input(prompt)
         if answer in ["r", "p", "s"]:
