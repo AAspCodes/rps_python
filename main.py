@@ -11,3 +11,7 @@ def ask_user():
 
 def main():
     answer = ask_user()
+
+
+if __name__ == "__main__":
+    main()
