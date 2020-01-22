@@ -46,7 +46,16 @@ def again():
 def main():
     answer = ask_user()
     opp = gen_opp()
-
+    winner = compare(answer, opp)
+    if winner == 'draw':
+        print("draw")
+        again()
+    if winner == 'win':
+        print("You win!")
+        again()
+    if winner == 'lose':
+        print("You lose.")
+        again()
 
 if __name__ == "__main__":
     main()
