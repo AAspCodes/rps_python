@@ -5,7 +5,7 @@ def ask_user():
         if answer in ["r", "p", "s"]:
             break
         else:
-            print("thats not an option")
+            print("That's not an option.")
     return answer
 
 
