@@ -7,3 +7,7 @@ def ask_user():
         else:
             print("thats not an option")
     return answer
+
+
+def main():
+    answer = ask_user()
