@@ -36,16 +36,16 @@ def again():
 def tell_user(answer, opp):
     if answer == 'r':
         ans = 'rock'
-    if answer == 'p':
+    elif answer == 'p':
         ans = 'paper'
-    if answer == 's':
+    elif answer == 's':
         ans = 'scissors'
 
     if opp == 'r':
         opp_ans = 'rock'
-    if opp == 'p':
+    elif opp == 'p':
         opp_ans = 'paper'
-    if opp == 's':
+    elif opp == 's':
         opp_ans = 'scissors'
 
     print(f'You played {ans}')
