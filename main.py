@@ -34,22 +34,9 @@ def again():
 
 
 def tell_user(answer, opp):
-    if answer == 'r':
-        ans = 'rock'
-    elif answer == 'p':
-        ans = 'paper'
-    elif answer == 's':
-        ans = 'scissors'
-
-    if opp == 'r':
-        opp_ans = 'rock'
-    elif opp == 'p':
-        opp_ans = 'paper'
-    elif opp == 's':
-        opp_ans = 'scissors'
-
-    print(f'You played {ans}')
-    print(f'The computer played {opp_ans}')
+    converter = {'r': 'rock', 'p': 'paper', 's': 'scissors'}
+    print(f'You played {converter[answer]}')
+    print(f'The computer played {converter[opp]}')
 
 
 def main():
