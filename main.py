@@ -15,6 +15,7 @@ def ask_user():
 def gen_opp():
     return random.choice(["r", "p", "s"])
 
+
 def compare(answer, opp):
     if answer == opp:
         return
