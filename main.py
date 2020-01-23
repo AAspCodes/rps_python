@@ -34,8 +34,22 @@ def again():
 
 
 def tell_user(answer, opp):
-    print(f'You played {answer}')
-    print(f'The computer played {opp}')
+    if answer == 'r':
+        ans = 'rock'
+    elif answer == 'p':
+        ans = 'paper'
+    elif answer == 's':
+        ans = 'scissors'
+
+    if opp == 'r':
+        opp_ans = 'rock'
+    elif opp == 'p':
+        opp_ans = 'paper'
+    elif opp == 's':
+        opp_ans = 'scissors'
+
+    print(f'You played {ans}')
+    print(f'The computer played {opp_ans}')
 
 
 def main():
@@ -44,11 +58,11 @@ def main():
     tell_user(answer, opp)
     winner = compare(answer, opp)
     if winner is None:
-        print('draw')
+        print("It's a draw!")
     elif winner:
-        print('win')
+        print('You win!')
     else:
-        print("lose")
+        print("You lose.")
     again()
 
 
