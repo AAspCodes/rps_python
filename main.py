@@ -43,9 +43,16 @@ def again():
     if ans == 'y':
         main()
 
+
+def tell_user(answer, opp):
+    print(f'You played {answer}')
+    print(f'The computer played {opp}')
+
+
 def main():
     answer = ask_user()
     opp = gen_opp()
+    tell_user(answer, opp)
     winner = compare(answer, opp)
     if winner == 'draw':
         print("draw")
