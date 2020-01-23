@@ -15,47 +15,42 @@ def ask_user():
 def gen_opp():
     return random.choice(["r", "p", "s"])
 
+
 def compare(answer, opp):
-    if answer == 'r':
-        if opp == 'r':
-            return 'draw'
-        if opp == 'p':
-            return 'lose'
-        if opp == 's':
-            return 'win'
-    if answer == 'p':
-        if opp == 'r':
-            return 'win'
-        if opp == 'p':
-            return 'draw'
-        if opp == 's':
-            return 'lose'
-    if answer == 's':
-        if opp == 'r':
-            return 'lose'
-        if opp == 'p':
-            return 'win'
-        if opp == 's':
-            return 'draw'
+    if answer == opp:
+        return
+    elif answer == 'r':
+        return opp == 's'
+    elif answer == 'p':
+        return opp == 'r'
+    else:
+        return opp == 'p'
+
 
 def again():
     ans = input("Do you want to play again? (y/n): ")
     if ans == 'y':
         main()
 
+
+def tell_user(answer, opp):
+    print(f'You played {answer}')
+    print(f'The computer played {opp}')
+
+
 def main():
     answer = ask_user()
     opp = gen_opp()
+    tell_user(answer, opp)
     winner = compare(answer, opp)
-    if winner == 'draw':
-        print("draw")
-        again()
-    if winner == 'win':
-        print("You win!")
-        again()
-    if winner == 'lose':
-        print("You lose.")
-        again()
+    if winner is None:
+        print('draw')
+    elif winner:
+        print('win')
+    else:
+        print("lose")
+    again()
+
 
 if __name__ == "__main__":
     main()
